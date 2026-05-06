@@ -24,6 +24,11 @@
         "backgroundColor": "#e74c3c"
       },
       "package": "com.thespanishlessons.app"
+    },
+    "extra": {
+      "eas": {
+        "projectId": "fb14d4b6-3566-4369-91ae-9dd72af8427d"
+      }
     }
   }
 }
