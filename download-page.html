@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Spanish Lessons - Download App</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background-color: #FFFFFF;
+            color: #2C3E50;
+            line-height: 1.6;
+        }
+        
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        .header {
+            background-color: #2C3E50;
+            color: #FFFFFF;
+            padding: 40px 20px;
+            text-align: center;
+            margin-bottom: 40px;
+        }
+        
+        .header h1 {
+            font-size: 28px;
+            font-weight: 300;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            margin-bottom: 10px;
+        }
+        
+        .header p {
+            font-size: 16px;
+            opacity: 0.8;
+            font-style: italic;
+        }
+        
+        .download-section {
+            background: #FFFFFF;
+            border: 1px solid #E8E8E8;
+            border-radius: 8px;
+            padding: 30px;
+            margin-bottom: 30px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        
+        .download-section h2 {
+            font-size: 20px;
+            font-weight: 300;
+            margin-bottom: 20px;
+            letter-spacing: 1px;
+        }
+        
+        .download-button {
+            display: inline-block;
+            background-color: #2C3E50;
+            color: #FFFFFF;
+            padding: 15px 30px;
+            text-decoration: none;
+            border-radius: 4px;
+            font-size: 16px;
+            margin: 10px 0;
+            transition: background-color 0.3s;
+        }
+        
+        .download-button:hover {
+            background-color: #1A252F;
+        }
+        
+        .qr-section {
+            text-align: center;
+            margin: 30px 0;
+        }
+        
+        .qr-placeholder {
+            width: 200px;
+            height: 200px;
+            border: 2px dashed #E8E8E8;
+            margin: 20px auto;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 14px;
+            color: #5A6C7D;
+        }
+        
+        .instructions {
+            background: #F8F8F8;
+            padding: 20px;
+            border-radius: 8px;
+            margin: 20px 0;
+        }
+        
+        .instructions h3 {
+            font-size: 18px;
+            margin-bottom: 15px;
+            color: #2C3E50;
+        }
+        
+        .instructions ol {
+            margin-left: 20px;
+        }
+        
+        .instructions li {
+            margin-bottom: 10px;
+            color: #5A6C7D;
+        }
+        
+        .note {
+            font-size: 14px;
+            color: #5A6C7D;
+            font-style: italic;
+            text-align: center;
+            margin: 20px 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>The Spanish Lessons</h1>
+        <p>Elegant language learning for the modern mind</p>
+    </div>
+    
+    <div class="container">
+        <div class="download-section">
+            <h2>Download Our Mobile App</h2>
+            <p>Get our elegant Spanish learning app directly on your device. No app store required!</p>
+            
+            <div class="qr-section">
+                <div class="qr-placeholder">
+                    QR Code Coming Soon
+                </div>
+                <p>Scan this QR code with your phone camera</p>
+            </div>
+            
+            <div class="instructions">
+                <h3>How to Install:</h3>
+                <ol>
+                    <li>Scan the QR code with your phone camera</li>
+                    <li>Click the download link that appears</li>
+                    <li>For Android: Install the APK file</li>
+                    <li>For iPhone: Add to home screen from Safari</li>
+                    <li>Enjoy learning Spanish!</li>
+                </ol>
+            </div>
+            
+            <div style="text-align: center; margin: 30px 0;">
+                <a href="#" class="download-button" id="android-download">Download for Android</a>
+                <a href="#" class="download-button" id="ios-download">Download for iPhone</a>
+            </div>
+            
+            <p class="note">
+                Note: For iOS, you'll need to add the app to your home screen from Safari.<br>
+                For Android, you may need to enable "Install from unknown sources" in settings.
+            </p>
+        </div>
+        
+        <div class="download-section">
+            <h2>Alternative: Web App</h2>
+            <p>Can't install the app? Use our web version directly in your browser!</p>
+            <div style="text-align: center;">
+                <a href="https://thespanishlessons.github.io" class="download-button">Open Web App</a>
+            </div>
+        </div>
+    </div>
+    
+    <script>
+        // This would be updated with actual download links
+        document.getElementById('android-download').href = '#';
+        document.getElementById('ios-download').href = '#';
+    </script>
+</body>
+</html>

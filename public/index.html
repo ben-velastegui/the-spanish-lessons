@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Spanish Lessons</title>
+    <meta name="description" content="Elegant language learning for the modern mind">
+    <meta name="theme-color" content="#2C3E50">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">
+    <meta name="apple-mobile-web-app-title" content="Spanish Lessons">
+    <link rel="manifest" href="/manifest.json">
+    <link rel="apple-touch-icon" href="/assets/icon-192.png">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background-color: #FFFFFF;
+            color: #2C3E50;
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+        }
+        
+        .container {
+            max-width: 100%;
+            margin: 0 auto;
+            padding: 0;
+        }
+        
+        .header {
+            background-color: #2C3E50;
+            color: #FFFFFF;
+            padding: 40px 20px;
+            text-align: center;
+        }
+        
+        .header h1 {
+            font-size: 28px;
+            font-weight: 300;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            margin-bottom: 10px;
+        }
+        
+        .header p {
+            font-size: 16px;
+            opacity: 0.8;
+            font-style: italic;
+        }
+        
+        .install-prompt {
+            background: linear-gradient(135deg, #2C3E50 0%, #34495E 100%);
+            color: #FFFFFF;
+            padding: 20px;
+            margin: 20px;
+            border-radius: 12px;
+            text-align: center;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+        
+        .install-prompt h2 {
+            font-size: 20px;
+            margin-bottom: 15px;
+            font-weight: 300;
+        }
+        
+        .install-steps {
+            text-align: left;
+            max-width: 300px;
+            margin: 0 auto 20px;
+        }
+        
+        .install-steps ol {
+            margin-left: 20px;
+        }
+        
+        .install-steps li {
+            margin-bottom: 10px;
+            font-size: 14px;
+        }
+        
+        .app-button {
+            background: #FFFFFF;
+            color: #2C3E50;
+            padding: 15px 30px;
+            border: none;
+            border-radius: 25px;
+            font-size: 16px;
+            font-weight: 500;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        
+        .app-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+        }
+        
+        .features {
+            padding: 20px;
+        }
+        
+        .feature-card {
+            background: #FFFFFF;
+            border: 1px solid #E8E8E8;
+            border-radius: 8px;
+            padding: 20px;
+            margin: 10px 20px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        
+        .feature-card h3 {
+            font-size: 18px;
+            margin-bottom: 10px;
+            color: #2C3E50;
+        }
+        
+        .feature-card p {
+            color: #5A6C7D;
+            font-size: 14px;
+        }
+        
+        .ios-only {
+            display: none;
+        }
+        
+        @media (max-width: 768px) {
+            .ios-only {
+                display: block;
+            }
+        }
+        
+        .hidden {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>The Spanish Lessons</h1>
+            <p>Elegant language learning for the modern mind</p>
+        </div>
+        
+        <div class="install-prompt ios-only" id="installPrompt">
+            <h2>📱 Install This App</h2>
+            <div class="install-steps">
+                <ol>
+                    <li>Tap the <strong>Share</strong> button <span style="font-size: 18px;">⎋</span></li>
+                    <li>Scroll down and tap <strong>"Add to Home Screen"</strong></li>
+                    <li>Tap <strong>"Add"</strong> in the top right</li>
+                    <li>App icon appears on your home screen!</li>
+                </ol>
+            </div>
+            <button class="app-button" onclick="hideInstallPrompt()">Got it, thanks!</button>
+        </div>
+        
+        <div class="features">
+            <div class="feature-card">
+                <h3>🎓 Professional Courses</h3>
+                <p>Curated learning experiences for every level, from beginner to advanced.</p>
+            </div>
+            
+            <div class="feature-card">
+                <h3>📅 Flexible Schedule</h3>
+                <p>Weekly sessions designed for your convenience with multiple time options.</p>
+            </div>
+            
+            <div class="feature-card">
+                <h3>👥 Small Class Sizes</h3>
+                <p>Maximum 8 students per class for personalized attention and better learning.</p>
+            </div>
+            
+            <div class="feature-card">
+                <h3>📞 Easy Contact</h3>
+                <p>Get in touch easily for inquiries, trial lessons, and enrollment information.</p>
+            </div>
+        </div>
+    </div>
+    
+    <script>
+        // Check if running in standalone mode (already installed)
+        if (window.matchMedia('(display-mode: standalone)').matches) {
+            document.getElementById('installPrompt').classList.add('hidden');
+        }
+        
+        // Hide install prompt after user clicks button
+        function hideInstallPrompt() {
+            document.getElementById('installPrompt').classList.add('hidden');
+        }
+        
+        // Detect iOS and show appropriate message
+        if (/iPad|iPhone|iPod/.test(navigator.userAgent)) {
+            console.log('iOS device detected');
+        }
+        
+        // Register service worker for offline functionality
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', function() {
+                navigator.serviceWorker.register('/sw.js').then(function(registration) {
+                    console.log('ServiceWorker registration successful');
+                }, function(err) {
+                    console.log('ServiceWorker registration failed: ', err);
+                });
+            });
+        }
+    </script>
+</body>
+</html>
