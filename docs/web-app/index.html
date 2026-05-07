@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Spanish Lessons - Web App</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">
+    <meta name="apple-mobile-web-app-title" content="Spanish Lessons">
+    <link rel="apple-touch-icon" sizes="180x180" href="/icon-192x192.png">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: -apple-system, BlinkMacSystemFont, sans-serif; 
+               background: #2C3E50; color: white; min-height: 100vh; }
+        .header { background: rgba(255,255,255,0.1); padding: 20px; text-align: center; }
+        .header h1 { font-size: 24px; font-weight: 300; margin-bottom: 5px; }
+        .header p { opacity: 0.8; font-size: 14px; }
+        .container { max-width: 600px; margin: 0 auto; padding: 20px; }
+        .card { background: rgba(255,255,255,0.1); padding: 20px; border-radius: 10px; margin: 15px 0; }
+        .card h3 { color: #e74c3c; margin-bottom: 10px; }
+        .card p { line-height: 1.5; margin-bottom: 15px; }
+        .btn { background: #e74c3c; color: white; padding: 12px 24px; 
+               text-decoration: none; border-radius: 8px; display: inline-block; 
+               margin: 5px; font-weight: 500; transition: all 0.3s; }
+        .btn:hover { transform: translateY(-2px); box-shadow: 0 4px 8px rgba(0,0,0,0.2); }
+        .btn.secondary { background: rgba(255,255,255,0.2); }
+        .grid { display: grid; grid-template-columns: 1fr 1fr; gap: 15px; margin: 20px 0; }
+        .feature-card { background: rgba(255,255,255,0.05); padding: 15px; border-radius: 8px; text-align: center; }
+        .feature-card .icon { font-size: 32px; margin-bottom: 10px; }
+        .install-prompt { background: rgba(52, 168, 83, 0.2); padding: 15px; border-radius: 8px; margin: 20px 0; }
+        .install-prompt strong { color: #34A853; }
+        @media (max-width: 768px) {
+            .grid { grid-template-columns: 1fr; }
+            .container { padding: 10px; }
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>📱 Spanish Lessons</h1>
+        <p>Elegant language learning on your device</p>
+    </div>
+    
+    <div class="container">
+        <div class="install-prompt">
+            <strong>📲 Add to Home Screen:</strong> Tap the share button and select "Add to Home Screen" to install this app on your device!
+        </div>
+        
+        <div class="card">
+            <h3>🎯 Welcome to Spanish Lessons</h3>
+            <p>Learn Spanish with our elegant, mobile-friendly web app. Perfect for iPhone, iPad, and Android devices.</p>
+            <a href="#courses" class="btn">📚 Browse Courses</a>
+            <a href="#schedule" class="btn secondary">📅 View Schedule</a>
+        </div>
+        
+        <div class="grid">
+            <div class="feature-card">
+                <div class="icon">📚</div>
+                <h4>Courses</h4>
+                <p>Browse our comprehensive Spanish courses</p>
+            </div>
+            <div class="feature-card">
+                <div class="icon">📅</div>
+                <h4>Schedule</h4>
+                <p>View class times and locations</p>
+            </div>
+            <div class="feature-card">
+                <div class="icon">👥</div>
+                <h4>Contact</h4>
+                <p>Get in touch with instructors</p>
+            </div>
+            <div class="feature-card">
+                <div class="icon">🎨</div>
+                <h4>Elegant Design</h4>
+                <p>Beautiful, intuitive interface</p>
+            </div>
+        </div>
+        
+        <div class="card" id="courses">
+            <h3>📚 Available Courses</h3>
+            <p><strong>Beginner Spanish:</strong> Perfect for those just starting their Spanish journey.</p>
+            <p><strong>Intermediate Spanish:</strong> Build on your existing knowledge.</p>
+            <p><strong>Advanced Spanish:</strong> Master the language with advanced techniques.</p>
+            <p><strong>Business Spanish:</strong> Professional Spanish for the workplace.</p>
+            <a href="#contact" class="btn">📞 Enroll Now</a>
+        </div>
+        
+        <div class="card" id="schedule">
+            <h3>📅 Weekly Schedule</h3>
+            <p><strong>Monday - Friday:</strong> 9:00 AM - 8:00 PM</p>
+            <p><strong>Saturday:</strong> 10:00 AM - 6:00 PM</p>
+            <p><strong>Sunday:</strong> 12:00 PM - 4:00 PM</p>
+            <p><strong>Locations:</strong> Central London, Online, and various satellite locations.</p>
+            <a href="#contact" class="btn">📞 Book a Class</a>
+        </div>
+        
+        <div class="card" id="contact">
+            <h3>👥 Contact Us</h3>
+            <p><strong>📧 Email:</strong> info@thespanishlessons.com</p>
+            <p><strong>📞 Phone:</strong> +44 20 7123 4567</p>
+            <p><strong>📍 Main Office:</strong> 123 Oxford Street, London, UK</p>
+            <p><strong>🌐 Website:</strong> www.thespanishlessons.com</p>
+            <a href="mailto:info@thespanishlessons.com" class="btn">📧 Send Email</a>
+            <a href="tel:+442071234567" class="btn secondary">📞 Call Us</a>
+        </div>
+        
+        <div class="card">
+            <h3>🌟 Why Choose Spanish Lessons?</h3>
+            <p>✅ Native Spanish-speaking instructors</p>
+            <p>✅ Small class sizes for personalized attention</p>
+            <p>✅ Flexible scheduling to fit your lifestyle</p>
+            <p>✅ Modern teaching methods and materials</p>
+            <p>✅ Beautiful, comfortable learning environments</p>
+            <p>✅ Competitive pricing with no hidden fees</p>
+        </div>
+    </div>
+    
+    <script>
+        // Add to home screen prompt
+        let deferredPrompt;
+        
+        window.addEventListener('beforeinstallprompt', (e) => {
+            e.preventDefault();
+            deferredPrompt = e;
+        });
+        
+        function installApp() {
+            if (deferredPrompt) {
+                deferredPrompt.prompt();
+                deferredPrompt.userChoice.then((choiceResult) => {
+                    if (choiceResult.outcome === 'accepted') {
+                        console.log('User accepted the install prompt');
+                    } else {
+                        console.log('User dismissed the install prompt');
+                    }
+                    deferredPrompt = null;
+                });
+            }
+        }
+    </script>
+</body>
+</html>
